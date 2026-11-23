@@ -1,0 +1,18 @@
+# Development files kept locally, never committed.
+/AGENTS.md
+/PLAN.md
+/TODO.md
+/ISSUES.md
+/docs/DEVELOPMENT.md
+/docs/dev/
+# Scratch and test output, reference documents, tape images and disk packs, worktrees; build trees; the distribution.
+/work/
+/build/
+/dist/
+# Screenshots saved by running the terminal in the repository root.
+/daf2020-*.png
+# Editors and Python.
+.vscode/
+.venv/
+__pycache__/
+*.py[cod]
