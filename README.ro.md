@@ -121,4 +121,4 @@ pachetele necesare.
 
 ## Licență
 
-GPL-3.0-or-later (`docs/LICENSE`). Componentele terțe sunt listate în `docs/THIRD_PARTY.md`.
+GPL-3.0-or-later (`LICENSE`). Componentele terțe sunt listate în `docs/THIRD_PARTY.md`.

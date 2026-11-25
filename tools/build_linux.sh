@@ -119,7 +119,8 @@ package_target() {
     sed -i -e '/^!\[[^]]*\](assets\/[^)]*)\r\?$/{N;d;}' -e '/^<p align="center">.*assets\/.*<\/p>\r\?$/{N;d;}' \
         "$stage/README.md" "$stage/README.ro.md"
     local doc
-    for doc in LICENSE THIRD_PARTY.md CHANGELOG.md NOTES.md NOTES.ro.md; do install -m 644 "$root/docs/$doc" "$stage/docs/"; done
+    install -m 644 "$root/LICENSE" "$stage/"
+    for doc in THIRD_PARTY.md CHANGELOG.md NOTES.md NOTES.ro.md; do install -m 644 "$root/docs/$doc" "$stage/docs/"; done
     install -m 644 "$pack" "$stage/disks/"
     mkdir -p "$root/dist/releases"
     local archive="$root/dist/releases/$name.tar.gz"

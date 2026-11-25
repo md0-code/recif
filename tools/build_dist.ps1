@@ -34,7 +34,8 @@ function Add-PackageFiles([string]$build, [string]$destination, [switch]$KeepPac
         $text = [regex]::Replace($text, '(?m)^(?:!\[[^\]]*\]\(assets/[^)]*\)|<p align="center">.*\bassets/.*</p>)\r?\n\r?\n', '')
         [System.IO.File]::WriteAllText((Join-Path $destination $name), $text, [System.Text.UTF8Encoding]::new($false))
     }
-    foreach ($name in @('LICENSE', 'THIRD_PARTY.md', 'CHANGELOG.md', 'NOTES.md', 'NOTES.ro.md')) {
+    Copy-Item -LiteralPath (Join-Path $root 'LICENSE') -Destination $destination -Force
+    foreach ($name in @('THIRD_PARTY.md', 'CHANGELOG.md', 'NOTES.md', 'NOTES.ro.md')) {
         Copy-Item -LiteralPath (Join-Path $root "docs/$name") -Destination $docs -Force
     }
 }
